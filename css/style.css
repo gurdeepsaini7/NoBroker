@@ -1,0 +1,1787 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html{
+    font-size: 15px;
+    scroll-behavior: smooth;
+}
+
+/* <====== Navigation Starts ======> */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.navigation{
+    width: 100%;
+    padding: 0.6rem 0.6rem 0.8rem 0.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0 2px 15px rgba(128, 128, 128, 0.26);
+    z-index: 999;
+    background-color: #fff;
+}
+
+.navigation .logo{
+    display: inline-block;
+}
+
+.navigation .logo img{
+    width: 11.5rem;
+    display: block;
+}
+
+.navigation .info{
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 1rem;
+}
+
+.navigation .info .details{
+    padding-top: 7px;
+}
+
+.navigation .info .details .my-booking{
+    display: inline-block;
+    border: 1px solid #e6e6e6;
+    padding: 6px 10px 2px 10px;
+    margin-left: 1rem;
+    border-radius: 2px;
+}
+
+.navigation .info .details .my-booking a img{
+    display: inline-block;
+    width: 1.2rem;
+}
+
+.navigation .info .details .my-booking a{
+    text-decoration: none;
+    color: black;
+}
+
+.navigation .info .details .my-booking a span{
+    position: relative;
+    top: -4px;
+    font-size: 0.95rem;
+    color: #363636;
+    padding-left: 5px;
+}
+
+.navigation .info .details .pay-rent{
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+
+.navigation .info .details .pay-rent a img{
+    width: 1.46rem;
+}
+
+.navigation .info .details .pay-rent a span{
+    color: #555;
+    border-left: 1px solid #ccc;
+    margin-left: 3px;
+    font-weight: 300;
+}
+
+.common-button{
+    font-family: 'Source Sans Pro', sans-serif;
+    height: 30px;
+    border: none;
+    background-color: #009587;
+    color: #fff;
+    position: relative;
+    top: -4px;
+    padding: 0 10px;
+    cursor: pointer;
+    margin: 0 0.2rem 0 1rem;
+    border-radius: 2px;
+}
+
+.common-button:hover{
+    background-color: #007a6f;
+}
+
+.navigation .info .details .sign-up{
+    text-decoration: none;
+    color: #555;
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+    border-right: 1px solid #ccc;
+    font-weight: 500;
+    position: relative;
+    top: -3px;
+}
+
+.navigation .info .menu-button{
+    display: inline-block;
+    padding-top: 12.5px;   
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.navigation .info .menu-button i{
+    color: #555;
+    font-size: 0.9rem;
+    margin-right: 2px;
+}
+
+.navigation .info .menu-button p{
+    color: #555;
+    display: inline-block;
+    font-weight: 300;
+}
+
+
+.navigation .info .menu-list{
+    position: absolute;
+    right: 0;
+    top: 3rem;
+    border: 1px solid #ddd;
+    overflow-y: auto;
+    height: calc(100vh - 3rem);
+    background-color: #fff;
+    width: 20rem;
+    padding: 0 1rem;
+    box-shadow: -2px 2px 15px 2px rgba(128, 128, 128, 0.249);
+    display: none;
+}
+
+.navigation .info .menu-list ul{
+    list-style: none;
+}
+
+.navigation .info .menu-list ul li{
+    border-bottom: 1px solid #ebebeb;
+    margin: 0.1rem 1rem;
+    padding: 0.65rem 0;
+}
+
+.navigation .info .menu-list ul li:last-child{
+    border-bottom: 0;
+}
+
+.navigation .info .menu-list ul li a{
+    text-decoration: none;
+    color: #777;    
+    display: block;
+    position: relative;
+}
+
+.navigation .info .menu-list ul li a i{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.8rem;
+}
+
+.contact-us{
+    padding-left: 1rem;
+    margin: 1rem 0 1rem 0;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.contact-us .social i{
+    color: black;
+    font-size: 1.4rem;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    padding-top: 0.8rem;
+    text-align: center;
+    margin: 1rem 1rem 0 0;
+}
+
+.active .navigation .info .menu-list{
+    display: block;
+}
+
+.contact-down{
+    visibility: hidden;
+}
+
+.active-dropdown-sign .contact-down{
+    /* display: block; */
+    visibility: visible;
+}
+
+.active-dropdown-sign .contact-up{
+    display: none;
+}
+
+.active-contact-us .contact-us{
+    display: none;
+}
+
+/* Navigation ends */
+
+/* <====== Banner Starts ======> */
+.my-container{
+    max-width: 56rem;
+    margin: 0 auto;
+}
+
+.banner{
+    width: 100%;
+    background-color: #fdfdfd;
+    padding: 5rem 0 2rem 0;
+}
+
+.banner .my-container .heading h1{
+    color: #787676;
+    font-weight: 400;
+    font-size: 2.1rem;
+    word-spacing: 2px;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.banner .my-container .sub-heading{
+    text-align: center;
+}
+
+.banner .my-container .sub-heading .set-bg{
+    display: inline-block;
+    background-color: rgba(252,178,68,.2);
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.banner .my-container .sub-heading .rental-agreement{
+    display: inline-block;
+}
+
+.banner .my-container .sub-heading .rental-agreement a{
+    color: #464646;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.banner .my-container .sub-heading .rental-agreement a .stick{
+    margin: 0 0.4rem;
+    color: #464646ab;
+    font-size: 1.5rem;
+    position: relative;
+    top: -2px;
+}
+
+.banner .my-container .sub-heading .rental-agreement a img{
+    width: 1.8rem;
+    position: relative;
+    top: 2px;
+    margin-right: 3px;
+}
+
+.banner .my-container .sub-heading .next-day-delivery a img{
+    width: 2rem;
+}
+
+.banner .my-container .tabs{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.banner .my-container .tabs .border{
+    border: 1px solid #efefef;
+    border-bottom: 0;
+    display: inline-block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.banner .my-container .tabs .tab{
+    display: inline-block;
+    width: 8.5rem;
+    height: 3rem;  
+    padding-top: 12px; 
+    background-color: #fcfcfc;
+}
+
+.banner .my-container .tabs .tab a{
+    text-decoration: none;
+    color: #afaaaa;
+    display: block;
+    font-size: 1.1rem;
+}
+
+.banner .my-container .tabs .tab-1{
+    border-top-left-radius: 5px;
+}
+
+.banner .my-container .tabs .tab-3{
+    border-top-right-radius: 5px;
+}
+
+.banner .my-container .tabs .tab-2{
+    background-color: #fff;
+    color: #fd3752;
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+    border-bottom: 3px solid #fd3752;
+}
+
+.banner .my-container .tabs .tab-2 a{
+    color: #fd3752;
+    font-weight: 600;
+}
+
+.form-box {
+    text-align: center;
+}
+
+.form-box form select{
+    background-color: #fff;
+    width: 10rem;
+    height: 3rem;
+    color: black;
+    padding: 0.45rem 0.2rem;
+    font-size: 1.1rem;
+    border: 1px solid #efefef;
+    position: relative;
+    left: 3px;
+}
+
+.form-box form select:focus{
+    outline: 0;
+}
+
+.form-box form .city {
+    border-top-left-radius: 5px;
+    border-bottom: 0;
+}
+
+.form-box form .city option{
+    color: black;
+}
+
+.form-box form .localities{
+    background-color: #fff;
+    width: 35rem;
+    height: 3rem;
+    border-bottom: 0;
+}
+
+.form-box form input{
+    border: 1px solid #efefef;
+    box-shadow: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.1rem;
+}
+
+.form-box form input:focus,
+.form-box form .city{
+    outline: 0;
+}
+
+.form-box form .search{
+    border: 0;
+    background-color: #fd3752;
+    color: #fff;
+    width: 10rem;
+    height: 3rem;
+    padding: 0.5rem 0.7rem;
+    position: relative;
+    left: -3px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1rem;
+    border-top-right-radius: 5px;
+}
+
+.form-box form .search i{
+    margin-right: 5px;
+}
+
+.form-box form .tenant{
+    height: 2.4rem;
+    margin: 0 0.8rem;
+    font-size: 1rem;
+}
+
+.form-box form .room{
+    height: 2.4rem;
+    font-size: 1rem;
+}
+
+.form-box form .radio{
+    width: 2rem;
+    height: 1.2rem;
+    position: relative;
+    top: 3px;
+
+}
+
+.form-box form .bottom-border{
+    background-color: #fcfcfc;
+    display: inline-block;
+    width: 55rem;
+    padding: 0.4rem 0;
+    border: 1px solid #efefef;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.form-box form .bottom-border .radio-button{
+    display: inline-block;
+}
+/* Banner ends */
+
+/* <====== Property Owner Section Starts ======> */
+.property-owner{
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+}
+
+.property-owner p{
+    color: #464646;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.property-owner p::before{
+    content: "";
+    width: 5rem;
+    height: 1px;
+    background-color: #ccc;
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    left: -8px;
+}
+
+.property-owner p::after{
+    content: "";
+    width: 5rem;
+    height: 1px;
+    background-color: #ccc;
+    display: inline-block;
+    position: relative;
+    top: -4px;
+    left: 8px;
+}
+
+.property-owner .common-button{
+    margin: 1.5rem 0 0 0;
+    padding: 0 25px;
+    font-size: 1.05rem;
+    font-weight: 400;
+    height: 35px;
+}
+
+.credit-card{
+    width: 100%;
+    background-color: #384d6c;
+    text-align: center;
+    padding: 0.8rem 0 0.7rem 0;
+    cursor: pointer;
+    margin-top: 0.7rem;
+}
+
+.credit-card .align-center{
+    display: inline-block;
+}
+
+.credit-card .align-center i{
+    font-size: 1.5rem;
+    color: #ffffffec;
+    position: relative;
+    top: 3px;
+}
+
+.credit-card .align-center p{
+    color: #fff;
+    display: inline-block;
+    margin: 0 0.6rem;
+    font-size: 0.93rem;
+    font-weight: 600;
+}
+
+.credit-card .align-center button{
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0.3rem 0.6rem;
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.property-items{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.property-items .item{
+    width: 15%;
+    text-align: center;
+}
+
+.property-items .item h5{
+    color: #464646;
+    background-color: #ffefd9;
+    padding: 2px 10px;
+    border-radius: 9px;
+    display: inline-block;
+    margin-bottom: 9px;
+    font-weight: 600;
+}
+
+.property-items .item-4 h5,
+.property-items .item-6 h5{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.property-items .item img{
+    width: 4rem;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s all linear;
+}
+
+.property-items .item img:hover{
+    transform: scale(1.3);
+}
+
+.property-items .item p{
+    margin-top: 0.8rem;
+}
+/* Property Owner Section ends */
+
+/* <====== Why Use NoBroker Starts ======> */
+.common-heading{
+    width: 100%;
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* background-color: yellow; */
+}
+
+.common-heading .line{
+    width: 35%;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 20px;
+    position: relative;
+}
+
+.common-heading .line-1::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -22px;
+    top: -10px;
+    display: inline-block;
+    border: 1px solid #fd3752;
+    border-radius: 50%;
+}
+
+.common-heading .line-2::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -22px;
+    top: -10px;
+    display: inline-block;
+    border: 1px solid #fd3752;
+    border-radius: 50%;
+}
+
+.common-heading h1{
+    color: #787676;
+    font-weight: 500;
+    font-size: 2.15rem;
+}
+
+.why-use{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1.8rem 0;
+}
+
+.why-use .item{
+    width: 20%;
+    text-align: center;
+    color: #464646;
+}
+
+.why-use .item img{
+    transition: 0.3s all linear;
+}
+
+.why-use .item img:hover{
+    transform: scale(1.3);
+}
+
+.why-use .item h4{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0.6rem 0 0.3rem 0;
+}
+
+.why-use .item p{
+    font-size: 1rem;
+    width: 70%;
+    margin: 0 auto;
+}
+/* Why Use NoBroker ends */
+
+/* <====== NoBroker Business... Starts ======> */
+.nobroker{
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 1rem 0 3rem 0;
+}
+
+.nobroker .common-heading .line{
+    width: 25%;
+}
+
+.nobroker .container{
+    max-width: 55rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nobroker .container .image{
+    width: 40%;
+}
+
+.nobroker .container .text{
+    width: 48%;
+    align-self: center;
+}
+
+.nobroker .container .text h5{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #787676;
+    margin-bottom: 2rem;
+}
+
+.nobroker .container .text button{
+    width: 8rem;
+    height: 3rem;
+    border: 0;
+    background-color: #fd3752;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.nobroker .container .text .line{
+    width: 86%;
+    height: 1px;
+    background-color: #ccc;
+}
+
+.nobroker .container .text p{
+    color: #464646;
+}
+/* NoBroker Business... ends */
+
+/* <====== We Make Difference Starts ======> */
+.difference .items{
+    max-width: 90rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0 4rem 0;
+}
+
+.difference .item{
+    width: 30%;
+    text-align: center;
+} 
+
+.difference .items .circle{
+    width: 12rem;
+    height: 12rem;
+    border: 2px solid #fd3752;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.difference .items .circle span{
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fd3752;
+}
+
+.difference .items  h2{
+    color: #464646;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+/* We Make Difference ends */
+
+/* <====== Loves Us Starts ======> */
+.loves-us{
+    width: 100%;
+    padding: 3rem 2rem;
+    background-color: #334a5c;
+}
+
+.loves-us .heading h1{
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+}
+
+.loves-us .video{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Swiper Starts*/
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.loves-us .mySwiper .item{
+    background-color: #f3f3f3;
+    padding: 1rem 1.5rem;
+    height: 235px;
+    overflow: auto;
+}
+
+.loves-us .mySwiper .item .header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.loves-us .mySwiper .item .header img{
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.loves-us .mySwiper .item-1 .header img,
+.loves-us .mySwiper .item-4 .header img{
+    height: 3rem;
+}
+
+.loves-us .mySwiper .item .header .name{
+    text-align: left;
+    margin-left: 1rem;
+}
+
+.loves-us .mySwiper .item .header .name p{
+    font-size: 1rem;
+}
+
+.loves-us .mySwiper .item .header .name .stars .star{
+    width: 1rem;
+    height: 1rem;
+    background-image: url(../img/star.png);
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+}
+
+.loves-us .mySwiper .item h5{
+    text-align: left;
+    margin: 1.5rem 0 0.5rem 0;
+    color: #464646;
+}
+
+.loves-us .mySwiper .item p{
+    text-align: left;
+    color: #464646;
+    font-size: 0.95rem;
+    line-height: 22px;
+}
+
+.loves-us .more{
+    text-align: center;
+    margin-top: 3rem;
+}
+.loves-us .more a{
+    color: #fff;
+}
+ 
+.swiper-button-prev,
+.swiper-button-next{
+    opacity: 0.8;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;   
+    background-color: #fff; 
+    box-shadow: 0 3px 6px #ccc;    
+}
+
+.swiper-button-prev:after,
+.swiper-button-next::after {
+    font-size: 0;
+}
+
+.loves-us i{
+    color: #464646;
+}
+/* Loves Us ends */
+
+/* <====== Find A New Home Section Starts ======> */
+.new-home{
+    width: 60rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.new-home .mobile{
+    width: 30%;
+    text-align: center;
+}
+
+.new-home .mobile img{
+    width: 20rem;
+}
+
+.new-home .text{
+    width: 44%;
+    padding-top: 2.2rem;
+    color: #464646;
+}
+
+.new-home .text h1{
+    font-size: 2.15rem;
+    color: #fd3752;
+    font-weight: 500;
+}
+
+.new-home .text h2{
+    font-weight: 500;
+    margin-top: 2.4rem;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.new-home .text p{
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-bottom: 4.2rem;
+}
+
+.new-home .text img{
+    width: 11rem;
+    margin-right: 1rem;
+}
+/* Find A New Home Section ends */
+
+/* <====== Flat Section Starts ======> */
+.title{
+    background-color: #fcf9f9;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #ccc;
+}
+
+.title .tab{
+    width: 14.28%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title .tab-1{
+    border-bottom: 3px solid #464646;
+    background-color: #ededed;
+}
+
+.title .tab h4{
+    font-size: 1.05rem;
+    color: #464646;
+    font-weight: 600;
+    text-align: center;
+}
+
+.flat-location{
+    padding: 1rem 2.5rem 0 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.flat-location .item{
+    width: 18%;
+    margin-bottom: 1rem;
+}
+
+.flat-location .item-7{
+    width: 79.5%;
+    display: inline-block;
+}
+
+.flat-location .item h5{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #464646;
+    margin-bottom: 0.9rem;
+}
+
+.flat-location .item ul li{
+    list-style: none;
+}
+
+.flat-location .item ul li a{
+    text-decoration: none;
+    color: #464646;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin: 0.3rem 0;
+}
+/* Flat Section ends */
+
+/* <====== NoBroker Service Starts ======> */
+.no-broker{
+    padding: 2rem 2.5rem;
+}
+
+.no-broker h2{
+    color: #464646;
+    font-weight: 600;
+    font-size: 1.45rem;
+}
+
+.no-broker .container{
+    margin-top: 1.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.no-broker .container .item{
+    width: 48%;  
+}
+
+.no-broker .container .item h5{
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: #464646;
+    margin-bottom: 1rem;
+}
+
+.no-broker .container .item p{
+    border-radius: 5px;
+    display: inline-block;
+    color: #464646;
+    font-size: 0.9rem;
+    background-color: #e8e8e8;
+    padding: 4px 10px;
+    margin: 0 0.8rem 0.9rem 0;
+    cursor: pointer;
+}
+
+.property{
+    background-color: #ededed;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.property .item{
+    width: 50%;
+    text-align: center;
+    margin: 2rem 0;
+    color: #464646;
+}
+
+.property .item-1{
+    border-right: 1px solid #ccc;
+}
+
+.property .item h4{
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+.property .item p{
+    margin: 0.4rem 0 1.3rem 0;
+    padding: 0 1rem;
+}
+
+.property .item button{
+    width: 7rem;
+    height: 2rem;
+    border: 0;
+    background-color: #464646;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.about-us{
+    width: 65rem;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.about-us p a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #464646;
+    font-size: 1.15rem;
+    display: block;
+}
+/* NoBroker service ends */
+
+/* <====== Footer Starts ======> */
+footer{
+    width: 23rem;
+    margin: 0 auto;
+    padding: 2.5rem 0 1.3rem 0;
+}
+
+footer .image{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer .image img{
+    width: 7.5rem;
+    cursor: pointer;
+}
+
+footer .social-icon{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.3rem 0;
+}
+
+footer .social-icon i{
+    font-size: 1.4rem;
+    color: #464646;
+    border-radius: 50%;
+    border: 9px solid #e8e8e8;
+    background: #e8e8e8;
+    cursor: pointer;
+}
+
+footer p{
+    text-align: center;
+    color: #464646;
+    font-size: 0.92rem;
+}
+/* Footer ends */
+
+/* <====== Media Query Starts ======> */
+@media only screen and (max-width:1285px){
+    .nobroker .common-heading .line {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width:1200px){
+    .common-heading .line {
+        width: 31%;
+    }
+}
+
+@media only screen and (max-width:1080px){
+    .nobroker .common-heading .line {
+        width: 18%;
+    }
+}
+
+@media only screen and (max-width:1020px){
+    .nobroker .common-heading .line {
+        width: 16%;
+    }
+}
+
+@media only screen and (max-width:992px){
+    .navigation .info .details {
+        display: none;
+    }
+
+    .navigation .info {
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+    .navigation .info .menu-button i {
+        font-size: 1.2rem
+    }
+
+    .navigation .info .menu-list {
+        left: 0;
+    }
+
+    .navigation{
+        justify-content: center;
+    }
+
+    .navigation .info .menu-button p {
+        display: none;
+    }
+
+    .navigation .info .menu-list .contact-us .social i{
+        margin-right: 1rem;
+    }
+
+    .property-items .item {
+        width: 29%;
+        padding: 1.5rem 0;
+        border: 0.5px solid #dfdfdf;
+    }
+
+    .property-items{
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    .nobroker .container {
+        max-width: 50rem;
+    }
+
+    .difference .item {
+        width: 33%;
+    }
+
+    .new-home {
+        width: 50rem;
+    }
+
+    .new-home .mobile {
+        width: 40%;
+    }
+
+    .new-home .text {
+        width: 52%;
+    }
+
+    .flat-location .item {
+        width: 21%;
+    }
+
+    .flat-location .item-7 {
+        width: 48%;
+    }
+
+    .about-us {
+        width: 52rem;
+    }
+}
+
+@media only screen and (max-width:960px){
+    .nobroker .common-heading .line {
+        width: 13%;
+    }
+
+    .common-heading .line {
+        width: 29%;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .my-container {
+        max-width: 45rem;
+    }
+
+    .banner .my-container .tabs .tab {
+        width: 7rem;
+        height: 2.5rem;
+        padding-top: 9px;
+    }
+
+    .form-box form .localities {
+        width: 25rem;
+    }
+
+    .form-box form .search {
+        width: 8rem;
+    }
+
+    .form-box form select {
+        width: 8rem;
+    }
+
+    .form-box form .bottom-border {
+        width: 41rem;
+    }
+
+    .form-box form .tenant {
+        width: 8rem;
+    }
+
+    .about-us {
+        width: 48rem;
+    }
+
+    .nobroker .common-heading h1{
+        width: 50%;
+        text-align: center;
+    }
+
+    .nobroker .common-heading .line {
+        width: 18%;
+        margin-top: 35px;
+    }
+
+    .common-heading .line {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width:768px){
+    html{
+        font-size: 13px;
+    }
+
+    .banner .my-container .tabs .border {
+        display: block;
+    }
+
+    .banner .my-container .tabs .tab {
+        width: 33%;
+    }  
+
+    .my-container {
+        max-width: 93%;
+    }
+
+    .banner .my-container .tabs .tab {
+        width: 33%;
+        background: none;
+        margin-bottom: 2rem;
+    }
+
+    .banner .my-container .tabs .border{
+        border: 0;
+    }
+
+    .banner .my-container .tabs .tab-2{
+        border: 0;
+    }
+
+    .form-box form select {
+        width: 100%;
+        left: 0;
+        height: 4rem;
+    }
+
+    .form-box form .city {
+        border-top-left-radius: 0;
+        border-bottom: 1px solid #efefef;
+    }
+
+    .form-box form .localities {
+        width: 100%;
+        margin-top: 1.5rem;
+        border-bottom: 1px solid #efefef;
+        height: 4rem;
+    }
+
+    .form-box form .search {
+        width: 100%;
+        height: 4rem;
+        left: 0;
+        border-top-right-radius: 0;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 998;
+    }
+
+    .banner .my-container .tabs .tab a {
+        font-size: 1.2rem;
+    }
+
+    .form-box form .bottom-border {
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .form-box form .room,
+    .form-box form .tenant {
+        width: 25%;
+        height: 2.8rem;
+    }
+
+    .form-box form .bottom-border {
+        background: none;
+        border: 0;
+    }
+
+    .banner .my-container .sub-heading .set-bg{
+        display: block;
+    }
+
+    .property-owner .common-button {
+        padding: 0 18px;
+    }
+
+    .why-use .item img {
+        width: 4.5rem;
+    }
+
+    .why-use .item img:hover{
+        transform: scale(1.2);
+    }
+
+    .why-use .item-3 img{
+        width: 4.5rem;
+    }
+
+    .why-use .item-2 img,
+    .why-use .item-4 img {
+        width: 2.7rem;
+    }
+
+    .difference .items .circle {
+        width: 11rem;
+        height: 11rem;
+    }
+
+    .difference .items .circle span {
+        font-size: 2rem;
+    }
+
+    .difference .items {
+        max-width: 48rem;
+    }
+
+    iframe{
+        width: 35rem;
+    }
+
+    footer {
+        margin-bottom: 4rem;
+    }
+
+    footer .social-icon {
+        margin: 1.8rem 0 1.3rem 0;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .new-home {
+        width: 46rem;
+    }
+
+    .new-home .text img {
+        width: 9rem;
+    }
+
+    .new-home .text {
+        padding-top: 4.2rem;
+    }
+
+    .new-home .text h1 {
+        font-size: 2rem;
+    }
+
+    .new-home .text h2 {
+        margin-top: 2rem;
+    }
+
+    .new-home .text p {
+        margin-bottom: 3rem;
+    }
+}
+
+@media only screen and (max-width:655px){
+    .about-us {
+        width: 80%;
+        padding: 1.9rem 0;
+    }
+
+    .about-us a {
+        font-size: 1rem;
+    }
+
+    .title .tab h4 {
+        font-size: 0.95rem;
+    }
+
+    .flat-location .item h5 {
+        font-size: 1rem;
+    }
+
+    .common-heading h1 {
+        font-size: 2rem;
+    }
+
+    .about-us p{
+        width: 25%;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .about-us {
+        padding-bottom: 0.5rem;
+        justify-content: flex-start;
+    }
+
+    .common-heading .line {
+        margin-top: 16px;
+    }
+}
+
+@media only screen and (max-width:610px){
+    .new-home .mobile img {
+        width: 16rem;
+    }
+
+    .new-home .text {
+        width: 59%;
+        padding-top: 2rem;
+    }
+
+    .new-home .text h2 {
+        margin-top: 1rem;
+    }
+
+    .new-home .text p {
+        margin-bottom: 2rem;
+    }
+
+    .new-home {
+        width: 35rem;
+    }
+
+    .new-home .mobile img {
+        width: 14rem;
+    }
+
+    .new-home .text {
+        width: 56%;
+        padding-top: 0rem;
+    }
+
+    .new-home .text h1 {
+        font-size: 1.8rem;
+    }
+
+    .new-home .text h2 {
+        font-size: 1.3rem;
+        margin-top: 0.6rem;
+    }
+
+    .new-home .text p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .new-home .text img {
+        width: 6.5rem;
+    }
+
+    .flat-location .item {
+        width: 49%;
+    }
+
+    .why-use .item {
+        width: 45%;
+        margin-bottom: 2rem;
+    }
+
+    .nobroker .container .image {
+        width: 46%;
+        text-align: center;
+    }
+
+    .nobroker .container .image img{
+        width: 15rem;
+    }
+
+    .nobroker .container{
+        justify-content: center;
+    }
+
+    .difference .items {
+        max-width: 40rem;
+    }
+
+    .difference .items h2 {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+    }
+
+    .loves-us .mySwiper .item {
+        height: 190px;
+    }
+
+    .no-broker .container .item {
+        width: 100%;
+    }
+
+    iframe {
+        width: 30rem;
+        height: 19rem;
+    }
+}
+
+@media only screen and (max-width:592px){
+    .form-box form .bottom-border .radio-button {
+        display: block;
+        text-align: left;
+    }
+
+    .form-box form .room, .form-box form .tenant {
+        width: 33%;
+        margin: 1.5rem 0.7rem 0 0;
+    }
+
+    .form-box {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width:558px){
+    .banner .my-container .tabs .tab {
+        width: 24%;
+        margin-bottom: 1.3rem;
+    }
+
+    .property-items .item {
+        width: 43%;
+    }
+
+    .common-heading .line {
+        width: 21%;
+    }
+
+    .difference .items .circle {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .difference .items .circle span {
+        font-size: 1.7rem;
+    }
+
+    .title .tab {
+        width: 19.5%;
+        height: 3rem;
+    }
+
+    .about-us p{
+        width: 30%;
+    }
+
+    .banner .my-container .heading h1,
+    .common-heading h1{
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width:500px){
+    iframe {
+        width: 27rem;
+        height: 15rem;
+    }
+
+    .difference .common-heading .line {
+        width: 17%;
+    }
+
+    .new-home .mobile img {
+        width: 11.4rem;
+    }
+
+    .new-home .text h1 {
+        font-size: 1.5rem;
+    }
+
+    .new-home .text h2 {
+        font-size: 1.2rem;
+        margin-top: 0.4rem;
+    }
+
+    .new-home .text p {
+        font-size: 0.9rem;
+        margin-bottom: 1.1rem;
+    }
+
+    .new-home .text img {
+        width: 5.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .new-home .text {
+        padding-top: 1rem;
+    }
+
+    .new-home {
+        width: 30rem;
+    }
+}
+
+@media only screen and (max-width:490px){
+    .nobroker .common-heading .line {
+        margin-top: 26px;
+    }
+
+    .banner .my-container .heading h1, 
+    .common-heading h1 {
+        font-size: 1.6rem;
+    }
+
+    .nobroker .container .image {
+        width: 100%;
+    }
+
+    .nobroker .container .text {
+        width: 100%;
+        padding: 2rem 0 0 2rem;
+    }
+}
+
+@media only screen and (max-width:425px){
+    .difference .item {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .difference .item:last-child {
+        margin-bottom: 0;
+    }
+
+    iframe {
+        width: 23rem;
+        height: 13rem;
+    }
+
+    .new-home .mobile {
+        width: 100%;
+    }
+
+    .new-home .mobile img {
+        width: 15rem;
+    }
+
+    .new-home .text {
+        padding: 1rem 0 0 1rem;
+        width: 100%;
+    }
+
+    .property .item {
+        width: 100%;
+        text-align: left;
+        margin: 2rem 0;
+        padding-left: 2rem;
+    }
+
+    .property .item p {
+        margin: 0.2rem 0 0.5rem 0;
+        padding: 0;
+    }
+
+    .property .item-1 {
+        border-right: 0;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 2rem;
+        margin-bottom: 0;
+    }
+
+    .common-heading .line-2::after {
+        width: 12px;
+        height: 12px;
+        left: -13px;
+        top: -6px;
+    }
+
+    .common-heading .line-1::after {
+        width: 12px;
+        height: 12px;
+        right: -13px;
+        top: -6px;
+    }
+
+    .common-heading .line {
+        margin-top: 12px;
+    }
+
+    .banner .my-container .heading h1,
+    .common-heading h1 {
+        font-size: 1.5rem;
+    }
+
+    .title .tab {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width:375px){
+    html{
+        font-size: 12px;
+    }
+
+    iframe {
+        width: 27rem;
+        height: 16rem;
+    }
+
+    .banner .my-container .heading h1{
+        font-size: 1.4rem;
+    }
+}
+
+@media only screen and (max-width:345px){
+    iframe {
+        width: 23rem;
+        height: 12rem;
+    }
+
+    .new-home {
+        width: 26rem;
+    }
+}
+/* Media Query ends */
